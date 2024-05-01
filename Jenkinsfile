@@ -27,7 +27,6 @@ pipeline {
                         sh '''
                         ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} \
                             "cd /home/ec2-user/ && \
-                             mvn clean package && \
                              sudo docker build -t my-java-app:latest . && \
                              sudo docker tag my-java-app:latest muditsoni32/my-java-app:latest"
                         '''
