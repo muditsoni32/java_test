@@ -8,15 +8,6 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
-            steps {
-                script {
-                    // Build the Java project
-                    sh './mvnw clean package'
-                }
-            }
-        }
-
         stage('Prepare Remote Environment') {
             steps {
                 script {
