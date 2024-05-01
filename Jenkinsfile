@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    sh 'chmod +x mvnw'
                     // Build the Java project
                     sh './mvnw clean package'
                 }
